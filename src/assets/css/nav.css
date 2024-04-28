@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #000000; 
+  background: -webkit-linear-gradient(to right, #434343, #000000);  
+  background: linear-gradient(to right, #434343, #000000);
+  
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.nav-area {
+  position: sticky;
+  height: 10vh;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(15, 14, 14);
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center; 
+  font-family: 'Poppins', sans-serif;
+  height: 10vh;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.nav-links .center {
+  margin: 1px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  position: relative;
+  color: #ccc;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  text-shadow: 0px 0px 10px #a58e0a;
+}
+
+.nav-links li a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: darkgray;
+  border-radius: 12px;
+  transition: all 0.7s ease;
+}
+
+.nav-links li a:hover:before {
+  width: 77%;
+}
+
+.nav-links li.center a:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+  .nav-links li a {
+    font-size: 24px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .search-bar {
+    padding: 10px;
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  /* margin-right: px; */
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.search-input::placeholder {
+  content: '\u{1F50D}';
+  font-size: 18px;
+  color: #555;
+}
+
+.search-input:focus::placeholder {
+  color: transparent;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  margin-right: 8px; 
+}
+
+.logo-placeholder {
+  width: 24px; 
+  height: 24px; 
+  margin-right: 8px; 
+}
+
+
+
+li.logo {
+  padding: 10px 5px;
+}
+

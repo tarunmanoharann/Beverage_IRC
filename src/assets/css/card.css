@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    user-select: none;
+  }
+
+  
+  .cardcontainer {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    top: 60px;
+    left: calc(50% - 300px);
+    display: flex;
+  }
+  
+  .card {
+    display: flex;
+    height: 50%;
+    width:  40%;
+    background-color: #525252;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-50px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color:whitesmoke;
+    font-weight: 600;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  
+  
+  @-webkit-keyframes slidein {
+    0% {
+      top: -400px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      top: 0px;
+    }
+  }
+  @keyframes slidein {
+    0% {
+      top: -400px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      top: 0px;
+    }
+  }
+  @-webkit-keyframes slideout {
+    0% {
+      top: 0;
+      opacity: 1;
+    }
+    100% {
+      top: -400px;
+      opacity: 0;
+    }
+  }
+  @keyframes slideout {
+    0% {
+      top: 0;
+      opacity: 1;
+    }
+    100% {
+      top: -400px;
+      opacity: 0;
+    }
+  }
+  
+  #scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50px;
+    background:whitesmoke;
+    box-shadow:  10px 10px 50px #9d9d9d,
+    -20px -20px 50px #ffffff;
+    /* z-index: -1; */
+    
+    
+  }
+  
+  #left-zone {
+    height: 75%;
+    flex-grow: 0;
+    display: flex;
+    width: 18%;
+    align-items: center;
+    justify-content: center;
+  
+    
+  }
+  .list {
+    display: flex;
+    list-style: none;
+    align-content: stretch;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+  }
+  .list li.item input[type=radio] {
+    display: none;
+  }
+  .list li.item input[type=radio] ~ label {
+    display: block;
+    opacity: 0.5;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .list li.item input[type=radio] ~ label:first-letter {
+    text-transform: uppercase;
+  }
+  .list li.item input[type=radio] ~ label:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  .list li.item input[type=radio] ~ label.label_one:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+  .list li.item input[type=radio] ~ label.label_two:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+  .list li.item input[type=radio] ~ label.label_three:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+  .list li.item input[type=radio] ~ label.label_four:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+  .list li.item input[type=radio] ~ .content {
+    position: absolute;
+    left: 350px;
+    top: -400px;
+    width: 650px;
+    height: 400px;
+    -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+    -webkit-animation-name: slideout;
+            animation-name: slideout;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .list li.item input[type=radio] ~ .content p {
+    max-width: 50%;
+    text-align: center;
+  }
+  .list li.item input[type=radio]:checked ~ label {
+    opacity: 1;
+    -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  .list li.item input[type=radio]:checked ~ label.label_one {
+    color: #D64541;
+    border-right: solid 4px #D64541;
+  
+    background: #ffffff;
+  box-shadow:  6px 6px 12px #d1d1d1,
+               -6px -6px 12px #ffffff;
+  }
+  .list li.item input[type=radio]:checked ~ label.label_two {
+    color: #F5D76E;
+    border-right: solid 4px #F5D76E;
+  
+    box-shadow:  6px 6px 12px #d1d1d1,
+    -6px -6px 12px #ffffff;
+  }
+  .list li.item input[type=radio]:checked ~ label.label_three {
+    color: #00B16A;
+    border-right: solid 4px #00B16A;
+  
+    box-shadow:  6px 6px 12px #d1d1d1,
+    -6px -6px 12px #ffffff;
+  }
+  .list li.item input[type=radio]:checked ~ label.label_four {
+    color: #F27935;
+    border-right: solid 4px #F27935;
+    
+    box-shadow:  6px 6px 12px #d1d1d1,
+    -6px -6px 12px #ffffff;
+  
+  }
+  .list li.item input[type=radio]:checked ~ .content {
+    -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+    -webkit-animation-name: slidein;
+            animation-name: slidein;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  
+  #right-zone {
+    background: rgb(32, 32, 32);
+    height: 100%;
+    flex-grow: 3;
+    width: auto;
+  }
