@@ -10,5 +10,4 @@ Made for KINGS and QUEENS
 ## RegisterPage
 ![RegisterPage Image](https://github.com/tarunmanoharann/Beverage/blob/main/cc2photos/Register.png)
 
-## Sidebar
-![Sidebar Image](https://github.com/tarunmanoharann/Beverage/blob/main/cc2photos/Sidebar.png)
+
