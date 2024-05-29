@@ -12,11 +12,11 @@
   
   .carousel-item {
     --items: 10;
-    --width: clamp(150px, 30vw,  300px);
-    --height: clamp(200px, 40vw,  400px);
-    --x: calc(var(--active) * 800%);
-    --y: calc(var(--active) * 200%);
-    --rot: calc(var(--active) * 120deg);
+    --width: clamp(150px, 30vw, 400px);
+    --height: clamp(200px, 40vw, 300px);
+    --x: calc(var(--active) * 1000%);
+    --y: 0;
+    --rot: calc(var(--active) * 200deg); 
     --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
     overflow: hidden;
     position: absolute;
@@ -27,15 +27,16 @@
     border-radius: 15px;
     top: 50%;
     left: 50%;
+    
     user-select: none;
-    transform-origin: 0% 100%;
+    transform-origin: center;
     box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 1);
-
+  
     background: black;
     pointer-events: all;
-    transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
+    transform: translate(var(--x), var(--y)) rotateY(var(--rot));
     transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
-  
+    
     .carousel-box {
       position: absolute;
       z-index: 1;
@@ -46,7 +47,7 @@
       transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
       opacity: var(--opacity);
       font-family: 'Orelo-sw-db', serif;
-  
+    
       &:before {
         content: '';
         position: absolute;
@@ -58,7 +59,7 @@
         background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5));
       }
     }
-  
+    
     .title {
       position: absolute;
       z-index: 1;
@@ -77,6 +78,10 @@
       pointer-events: none;
     }
   }
+  
+    
+  
+  
   
   .layout {
     position: absolute;
