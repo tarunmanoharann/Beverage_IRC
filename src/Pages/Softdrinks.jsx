@@ -133,40 +133,6 @@ export default function Softdrinks() {
           <img src={soft05} alt="card-effect" />
         </div>
       </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">06</div>
-          <img src={soft01} alt="card-effect" />
-        </div>
-      </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">07</div>
-          <img src={soft02} alt="card-effect" />
-        </div>
-      </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">08</div>
-          <img src={soft03} alt="card-effect" />
-        </div>
-      </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">09</div>
-          <img src={soft04} alt="card-effect" />
-        </div>
-      </div>
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">10</div>
-          <img src={soft05} alt="card-effect" />
-        </div>
-      </div>
 
       <div className="layout">
       <div className="box">Softdrinks</div>

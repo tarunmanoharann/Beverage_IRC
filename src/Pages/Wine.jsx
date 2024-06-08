@@ -134,40 +134,6 @@ export default function Wine() {
           <img src={wine05} alt="card-effect" />
         </div>
       </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">06</div>
-          <img src={wine01} alt="card-effect" />
-        </div>
-      </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">07</div>
-          <img src={wine02} alt="card-effect" />
-        </div>
-      </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">08</div>
-          <img src={wine03} alt="card-effect" />
-        </div>
-      </div>
-    
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">09</div>
-          <img src={wine04} alt="card-effect" />
-        </div>
-      </div>
-      <div className="carousel-item">
-        <div className="carousel-box">
-          <div className="title">10</div>
-          <img src={wine05} alt="card-effect" />
-        </div>
-      </div>
 
       <div className="layout">
       <div className="box">Wine</div>
