@@ -3,39 +3,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Added for better responsiveness */
 }
 
-body {
-  height: 100vh;
-  background: #000000; 
-  background: -webkit-linear-gradient(to right, #434343, #000000);  
-  background: linear-gradient(to right, #434343, #000000);
-  
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.nav-area {
-  position: sticky;
-  height: 10vh;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  
+body {   
+  background:  #1d0200;   
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: rgb(15, 14, 14);
-  padding-left: 10px;
+  background: #020202; 
   padding-right: 10px;
   align-items: center; 
   font-family: 'Poppins', sans-serif;
-  height: 10vh;
+  height: 8vh;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  border-bottom: 2.5px solid #a58e0aa4;
 }
 
 .nav-links .center {
@@ -52,11 +38,11 @@ body {
 
 .nav-links li a {
   position: relative;
-  color: #ccc;
+  color: #e0e0e0; /* Lighter shade for better contrast */
   font-size: 25px;
   font-weight: 500;
   text-decoration: none;
-  text-shadow: 0px 0px 10px #a58e0a;
+  text-shadow: 0px 0px 5px #a58e0a; /* Keeping the contrast color */
 }
 
 .nav-links li.logo a:before {
@@ -66,7 +52,7 @@ body {
   left: 0;
   height: 3px;
   width: 0%;
-  background: darkgray;
+  background: #a58e0a; /* Changed to match text-shadow color */
   border-radius: 12px;
   transition: all 0.9s ease;
 }
@@ -77,7 +63,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .nav-links li a {
-    font-size: 24px;
+    font-size: 20px; /* Adjusted for better fit on smaller screens */
   }
 }
 
@@ -87,9 +73,6 @@ body {
   margin-right: 8px; 
 }
 
-
-
 li.logo {
   padding: 10px 5px;
 }
-
