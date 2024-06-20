@@ -14,7 +14,7 @@ function Card() {
         <ul className="list">
           <li className="item">
             <input type="radio" id="first" name="basic_carousel" value="first" checked />
-            <label className="label_one" htmlFor="first"><b>ShowCase</b></label>
+            <label className="label_one" htmlFor="first">Showcase</label>
             <div className="content content_one">
               <div className="cardcontainer">
                 <Link to="/tea" className='card' style={{opacity:'0.9'}}>

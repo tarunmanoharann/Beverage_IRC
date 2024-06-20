@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.4em;
-  border-top: 3px solid #a58e0aa4;
+  border-top: 0.1px solid #e0e0e0;
 }
 
 .footer-content {
@@ -31,7 +31,7 @@
 }
 
 .icons:hover {
-  color: #ff4500; /* Change to match the hover color with the primary palette */
+  color: #8b0000; 
 }
 
 .motto {
@@ -44,7 +44,7 @@
   background: linear-gradient(90deg, #000, #d30b0b, #000);
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: animate 3s linear infinite;
+  animation: animate 5.5s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -59,7 +59,7 @@
 }
 
 .social-link {
-  color: #8b0000; /* Darker red to match the primary color */
+  color: #c30404; 
   margin: 0 10px;
   font-size: 27px;
   text-decoration: none;

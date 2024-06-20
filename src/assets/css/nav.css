@@ -7,21 +7,23 @@
 }
 
 body {   
-  background:  #1d0200;   
+background: linear-gradient(90deg, hsla(10, 80%, 10%, 1) 10%, hsla(350, 60%, 40%, 1) 100%);
+background: -moz-linear-gradient(90deg, hsla(10, 80%, 10%, 1) 10%, hsla(350, 60%, 40%, 1) 100%);
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D7D2CB", endColorstr="#C7C2BE" );
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #020202; 
+  background: #080808; 
   padding-right: 10px;
   align-items: center; 
   font-family: 'Poppins', sans-serif;
   height: 8vh;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  border-bottom: 2.5px solid #a58e0aa4;
+  border-bottom: 0.1px solid #e0e0e0;
 }
 
 .nav-links .center {
@@ -38,32 +40,16 @@ body {
 
 .nav-links li a {
   position: relative;
-  color: #e0e0e0; /* Lighter shade for better contrast */
+  color: #e0e0e0;
   font-size: 25px;
   font-weight: 500;
   text-decoration: none;
-  text-shadow: 0px 0px 5px #a58e0a; /* Keeping the contrast color */
 }
 
-.nav-links li.logo a:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: #a58e0a; /* Changed to match text-shadow color */
-  border-radius: 12px;
-  transition: all 0.9s ease;
-}
-
-.nav-links li.logo a:hover:before {
-  width: 80%;
-}
 
 @media screen and (max-width: 600px) {
   .nav-links li a {
-    font-size: 20px; /* Adjusted for better fit on smaller screens */
+    font-size: 20px;
   }
 }
 
