@@ -44,7 +44,7 @@ const Login = () => {
     <>
       <div className="logincontainer">
         <div className="login-item">
-          <div className="logo">Sign In</div>
+          <div className="logo">Sign in</div>
 
           <form action="" method="post" className="form form-login" onSubmit={(e) => onSubmit(e)}>
             <div className="form-field">
@@ -77,7 +77,7 @@ const Login = () => {
             </div>
 
             <div className="form-field">
-              <p>Forgot password?</p>
+              <p className='login-text'>Forgot password ?</p>
             </div>
 
             <div className="form-field">
@@ -86,8 +86,8 @@ const Login = () => {
           </form>
 
           <div className="links">
-            <p>
-              Don't have an account ? <Link to="/Sign_up">Sign Up</Link>
+            <p className='login-text'>
+              Don't have an account? <Link to="/Sign_up"> Sign Up</Link>
             </p>
           </div>
         </div>

@@ -22,16 +22,19 @@
 .keywords {
   margin-top: 10px;
   font-size: larger;
+  cursor: pointer;
 }
 
 .keywords span {
   margin: 0 10px;
   font-weight: bold;
   text-shadow: 0 0 2px #ffd700;
+
 }
 
 .icons:hover {
-  color: #8b0000; 
+  color: #af0202; 
+  transition: all 0.3s ease-in-out;
 }
 
 .motto {
@@ -59,11 +62,10 @@
 }
 
 .social-link {
-  color: #c30404; 
+  color: #940202; 
   margin: 0 10px;
   font-size: 27px;
   text-decoration: none;
-  transition: all 1s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;

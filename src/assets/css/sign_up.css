@@ -8,7 +8,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .container {
@@ -18,19 +18,17 @@
   text-align: center;
   justify-content: center;
   width: 90%;
-  background: #ADA996;
-  background: -webkit-linear-gradient(to right, #ADA996 30%, #F2F2F2 50%, #DBDBDB 70%, #EAEAEA 100%);
-  background: linear-gradient(to right, #ADA996 8%, #F2F2F2 40%, #DBDBDB 70%, #EAEAEA 100%);
+  background: rgba(60, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 3%;
-  border: 5px double #ada6a6;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 2.5px solid rgba(255, 77, 77, 0.3);
 }
 
 .container header {
   font-size: 1.5rem;
-  color: #4e342e;
+  color: #f5e7e7;
   font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
@@ -40,11 +38,11 @@
   margin-top: 10px;
 }
 
-h2.register{
+h2.register {
   font-size: 30px;
-  font-family: cursive;
-  color: black;
-  text-shadow: 0px 0px 25px #73640d;
+  font-family: 'Poppins', sans-serif;
+  color: #f5e7e7;
+  text-shadow: 0px 0px 10px #a60000;
   font-weight: 600;
 }
 
@@ -54,7 +52,7 @@ h2.register{
 }
 
 .input-box label {
-  color: #6d4c41; 
+  color: #ffb3b3;
   display: block;
   text-align: left;
 }
@@ -65,11 +63,12 @@ h2.register{
   width: 100%;
   outline: none;
   font-size: 1rem;
-  color: #4e342e; 
+  color: #000000;
   margin-top: 8px;
-  border: 1px solid #8d6e63;
+  border: 1px solid #fb5b5b;
   border-radius: 6px;
   padding: 0 15px;
+  background-color: #f2f2f2;
 }
 
 .form .column {
@@ -86,41 +85,40 @@ h2.register{
   display: flex;
   flex-direction: row;
   column-gap: 50px;
-  margin-top: 10px;
+  margin-top: 3px;
 }
 
 .form .gender {
+  color: #f2f2f2;
   column-gap: 5px;
 }
 
 .gender-box h3 {
-  color: #4e342e; 
+  color: #ffb3b3;
   font-size: 1rem;
   font-weight: 400;
   text-align: left;
 }
 
 .gender input {
-  accent-color: #795548; 
+  accent-color: #fb5b5b;
 }
 
 .form button {
   height: 50px;
   width: 100%;
-  color: #fff;
+  color: #f2f2f2;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 20px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  background-color: #3e2723;
-  border-radius: 5em;
+  background-color: #810404;
+  border-radius: 5px;
 }
 
-.form button:hover {
-  background-color: rgb(132, 26, 26);
-}
+
 
 @media only screen and (max-width: 600px) {
   .container {
@@ -133,17 +131,17 @@ h2.register{
   }
 }
 
-.login-link
-{
+.login-link {
   padding: 10px;
-
+  color: #ffb3b3;
 }
 
+.login-link a {
+  color: #f72f2f;
+  font-weight: 550;
+  transition: color 0.3s;
+}
 
-
-
-
-
-
-
-
+.login-link a:hover {
+  color: #e84646;
+}
