@@ -27,7 +27,7 @@
 .keywords span {
   margin: 0 10px;
   font-weight: bold;
-  text-shadow: 0 0 8px #ffd700;
+  text-shadow: 0 0 2px #ffd700;
 }
 
 .icons:hover {
