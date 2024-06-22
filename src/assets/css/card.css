@@ -3,7 +3,7 @@
 body {
   user-select: none;
   /* background-color: #ffecd2; */
-    background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+  background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -76,7 +76,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 95%;
-  height: 55%;
+  height: 50%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -86,7 +86,7 @@ body {
   overflow: hidden;
   border-radius: 50px;
   background: rgba(51, 25, 25, 1);
-  box-shadow: 0px 10px 20px #520101;
+  box-shadow: 0px 0px 5px #520101;
 }
 
 #left-zone {
@@ -180,13 +180,12 @@ body {
 }
 
 .list li.item input[type=radio]:checked ~ label.label_one {
-  color: #ffecd2;
+  color: #6b0000;
   height: 55px;
   cursor: default;
   width: 95%;
-  font-size: 27px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 600;
   background: #ff6b6b;
   border-top-right-radius: 30px; 
   border-bottom-right-radius: 30px; 
