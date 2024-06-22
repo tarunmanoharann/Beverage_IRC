@@ -1,4 +1,6 @@
 .footer-container {
+  display: flex;
+  align-items: center;
   background-color: rgba(51, 25, 25, 0.95);
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
@@ -64,6 +66,7 @@
 
 .social-link {
   color: #ff6b6b;
+  width:10%;
   margin: 0 10px;
   font-size: 27px;
   text-decoration: none;
