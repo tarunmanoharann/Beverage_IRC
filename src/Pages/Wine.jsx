@@ -1,3 +1,6 @@
+
+
+
 import React, { useState, useEffect } from 'react';
 import '../assets/css/carousel.css';
 
@@ -16,13 +19,13 @@ const items = [
   { id: 5, image: wine05, title: "Peppermint Herbal", price: "$5.29" },
 ];
 
-export default function TeaCarousel() {
+export default function Whisky() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 2500);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -42,13 +45,18 @@ export default function TeaCarousel() {
           <div
             key={item.id}
             className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
-            style={{ transform: `translateX(${(index - activeIndex) * 100}%)` }}
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
-            <img src={item.image} alt={item.title} />
+            <div className="item-image">
+              <img src={item.image} alt={item.title} />
+            </div>
             <div className="item-info">
               <h3>{item.title}</h3>
               <p>{item.price}</p>
-              <button className="add-to-cart">Add to Cart</button>
+              <div className="button-group">
+                <button className="add-to-cart">Add to Cart</button>
+                <button className="favorite">❤</button>
+              </div>
             </div>
           </div>
         ))}
@@ -58,4 +66,3 @@ export default function TeaCarousel() {
     </div>
   );
 }
-
