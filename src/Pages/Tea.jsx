@@ -36,7 +36,6 @@ export default function TeaCarousel() {
 
   return (
     <div className="carousel-container">
-      <h2 className="carousel-title">Featured Teas</h2>
       <div className="carousel">
         {items.map((item, index) => (
           <div
