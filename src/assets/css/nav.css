@@ -3,27 +3,22 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Added for better responsiveness */
-}
-
-body {   
-background: linear-gradient(90deg, hsla(10, 80%, 10%, 1) 10%, hsla(350, 60%, 40%, 1) 100%);
-background: -moz-linear-gradient(90deg, hsla(10, 80%, 10%, 1) 10%, hsla(350, 60%, 40%, 1) 100%);
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D7D2CB", endColorstr="#C7C2BE" );
+  box-sizing: border-box;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #080808; 
+  background: rgba(51, 25, 25, 0.95);
   padding-right: 10px;
-  align-items: center; 
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   height: 8vh;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  border-bottom: 0.1px solid #e0e0e0;
+  border-bottom: 2px solid rgba(255, 107, 107, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links .center {
@@ -40,12 +35,16 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D7D2CB", en
 
 .nav-links li a {
   position: relative;
-  color: #e0e0e0;
+  color: #ffecd2;
   font-size: 25px;
   font-weight: 500;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
+.nav-links li a:hover {
+  color: #ff6b6b;
+}
 
 @media screen and (max-width: 600px) {
   .nav-links li a {
@@ -54,9 +53,11 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D7D2CB", en
 }
 
 .logo-placeholder {
-  width: 24px; 
-  height: 24px; 
-  margin-right: 8px; 
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
 }
 
 li.logo {

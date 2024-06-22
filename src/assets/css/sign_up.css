@@ -1,7 +1,7 @@
 #app {
   display: flex;
   flex-direction: column;
-  min-height: 89vh;
+  min-height:92vh;
 }
 
 .form-wrapper {
@@ -18,17 +18,17 @@
   text-align: center;
   justify-content: center;
   width: 90%;
-  background: rgba(60, 0, 0, 0.6);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 228, 196, 0.9);
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  border: 2.5px solid rgba(255, 77, 77, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 2.5px solid rgba(255, 107, 107, 0.5);
 }
 
 .container header {
   font-size: 1.5rem;
-  color: #f5e7e7;
+  color: #3a3a3a;
   font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
@@ -41,8 +41,8 @@
 h2.register {
   font-size: 30px;
   font-family: 'Poppins', sans-serif;
-  color: #f5e7e7;
-  text-shadow: 0px 0px 10px #a60000;
+  color: #ff6b6b;
+  text-shadow: 0px 0px 10px rgba(255, 107, 107, 0.3);
   font-weight: 600;
 }
 
@@ -52,7 +52,7 @@ h2.register {
 }
 
 .input-box label {
-  color: #ffb3b3;
+  color: #4a4a4a;
   display: block;
   text-align: left;
 }
@@ -63,12 +63,12 @@ h2.register {
   width: 100%;
   outline: none;
   font-size: 1rem;
-  color: #000000;
+  color: #4a4a4a;
   margin-top: 8px;
-  border: 1px solid #fb5b5b;
+  border: 1px solid #ff6b6b;
   border-radius: 6px;
   padding: 0 15px;
-  background-color: #f2f2f2;
+  background-color: #fff6e6;
 }
 
 .form .column {
@@ -89,36 +89,38 @@ h2.register {
 }
 
 .form .gender {
-  color: #f2f2f2;
+  color: #4a4a4a;
   column-gap: 5px;
 }
 
 .gender-box h3 {
-  color: #ffb3b3;
+  color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
   text-align: left;
 }
 
 .gender input {
-  accent-color: #fb5b5b;
+  accent-color: #ff6b6b;
 }
 
 .form button {
   height: 50px;
   width: 100%;
-  color: #f2f2f2;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   margin-top: 20px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  background-color: #810404;
+  background-color: #ff5252;
   border-radius: 5px;
 }
 
-
+.form button:hover {
+  background-color: #ff3838;
+}
 
 @media only screen and (max-width: 600px) {
   .container {
@@ -133,15 +135,15 @@ h2.register {
 
 .login-link {
   padding: 10px;
-  color: #ffb3b3;
+  color: #4a4a4a;
 }
 
 .login-link a {
-  color: #f72f2f;
+  color: #ff3838;
   font-weight: 550;
   transition: color 0.3s;
 }
 
 .login-link a:hover {
-  color: #e84646;
+  color: #ff1f1f;
 }

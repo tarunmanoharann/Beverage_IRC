@@ -18,27 +18,27 @@ function Card() {
             <div className="content content_one">
               <div className="cardcontainer">
                 <Link to="/tea" className='card' style={{opacity:'0.9'}}>
-                  <h3 className="title">Tea</h3>
+                  <h3 className="card-title">Tea</h3>
                   <img src={Img1}  alt='img'/>
                 </Link>
 
                 <Link to="/coffee" className="card" style={{opacity: '0.9' }}>
-                  <h3 className="title">Coffee</h3>
+                  <h3 className="card-title">Coffee</h3>
                   <img src={Img2} alt='img'/>
                 </Link>
 
                 <Link to="/softdrinks" className="card" style={{opacity: '0.9' }}>
-                  <h3 className="title">Soft Drinks</h3>
+                  <h3 className="card-title">Soft Drinks</h3>
                   <img src={Img3} alt='img'/>
                 </Link>
 
                 <Link to="/wine" className="card" style={{opacity: '0.9' }}>
-                  <h3 className="title">Wine</h3>
+                  <h3 className="card-title">Wine</h3>
                   <img src={Img4} alt='img'/>
                 </Link>
 
                 <Link to="/whisky" className="card" style={{opacity: '0.9' }}>
-                  <h3 className="title">Whisky</h3>
+                  <h3 className="card-title">Whisky</h3>
                   <img src={Img5} alt='img'/>
                 </Link>
                 

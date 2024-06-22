@@ -1,8 +1,8 @@
 .footer-container {
-  background-color: #020202;
+  background-color: rgba(51, 25, 25, 0.95);
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
-  color: #ccc;
+  color: #ffecd2;
   padding: 20px 10px 10px 10px;
   text-align: center;
   position: fixed;
@@ -11,7 +11,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.4em;
-  border-top: 0.1px solid #e0e0e0;
+  border-top: 2px solid rgba(255, 107, 107, 0.5);
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .footer-content {
@@ -28,23 +30,22 @@
 .keywords span {
   margin: 0 10px;
   font-weight: bold;
-  text-shadow: 0 0 2px #ffd700;
-
+  color: #ff6b6b;
 }
 
 .icons:hover {
-  color: #af0202; 
+  color: #ff3838;
   transition: all 0.3s ease-in-out;
 }
 
 .motto {
   font-size: 1.3em;
   font-weight: 800;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, #d30b0b, #000);
+  background: linear-gradient(90deg, #ff6b6b, #ffecd2, #ff6b6b);
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 5.5s linear infinite;
@@ -54,15 +55,15 @@
 
 @keyframes animate {
   0% {
-      background-position: -500%;
+    background-position: -500%;
   }
   100% {
-      background-position: 500%;
+    background-position: 500%;
   }
 }
 
 .social-link {
-  color: #940202; 
+  color: #ff6b6b;
   margin: 0 10px;
   font-size: 27px;
   text-decoration: none;
@@ -71,4 +72,8 @@
   justify-content: center;
   flex-direction: row;
   gap: 1em;
+}
+
+.social-link:hover {
+  color: #ffecd2;
 }

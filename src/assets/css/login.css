@@ -1,9 +1,5 @@
 @import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body {
-  background: linear-gradient(300deg, #2a0808 10%, #6b0000 60%);
-  margin: 0;
-}
 
 
 .logincontainer {
@@ -15,31 +11,29 @@ body {
 }
 
 .logo {
-  
-  font-family: 'Poppins', sans-serif;
   font-size: 27px;
   text-align: center;
   padding: 15px 0px;
   margin: 0;
-  color: #f5e7e7;
-  text-shadow: 0px 0px 10px #a60000;
+  color: #ff6b6b;
+  text-shadow: 0px 0px 10px rgba(255, 107, 107, 0.3);
   font-weight: 600;
 }
 
 .login-item {
   margin: 20px auto 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgba(60, 0, 0, 0.6);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 228, 196, 0.9); 
+  backdrop-filter: blur(10px);
   box-sizing: border-box;
   border-radius: 10px;
-  border: 2.5px solid rgba(255, 77, 77, 0.3);
+  border: 2.5px solid rgba(255, 107, 107, 0.5); 
   padding: 30px;
 }
 
@@ -47,8 +41,6 @@ input {
   border: 0;
   color: inherit;
   font: inherit;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 600;
   margin: 0;
   outline: 0;
   padding: 0;
@@ -58,51 +50,59 @@ input {
 .user:before {
   content: '\f007';
   font: 14px fontawesome;
-  color: #fb5b5b;
+  color: #ff6b6b;
 }
 
 .lock:before {
   content: '\f023';
   font: 14px fontawesome;
-  color: #fb5b5b;
+  color: #ff6b6b;
 }
 
-.form input[type="password"], .form input[type="text"], .form input[type="submit"] {
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"] {
   width: 100%;
 }
 
-.form-login label, .form-login input[type="text"], .form-login input[type="password"], .form-login input[type="submit"] {
+.form-login label,
+.form-login input[type="text"],
+.form-login input[type="password"],
+.form-login input[type="submit"] {
   border-radius: 5px;
   padding: 1rem;
-  color: #000000;
+  color: #4a4a4a;
 }
 
+
 .form-login label {
-  background-color: rgba(120, 0, 0, 0.5);
+  background-color: rgba(255, 107, 107, 0.2); 
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-.form-login input[type="text"], .form-login input[type="password"] {
-  background-color: #f2f2f2;
+.form-login input[type="text"],
+.form-login input[type="password"] {
+  background-color: #fff6e6; 
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  border: 1px solid #ff6b6b;
 }
 
-
-
 .form-login input[type="submit"] {
-  background-color: #810404;
-  color: #f2f2f2;
+  background-color: #ff5252; 
+  color: #ffffff;
   font-size: 20px;
   font-weight: 600;
   transition: background-color 0.3s;
   cursor: pointer;
 }
 
-
+.form-login input[type="submit"]:hover {
+  background-color: #ff3838; 
+}
 
 .form-field {
   display: flex;
@@ -120,24 +120,17 @@ input {
   width: 1px;
 }
 
-.text--center {
-  text-align: center;
-  color: #ffb3b3;
+.text--center,
+.login-text {
+  color: #3a3a3a;
 }
 
 a {
+  color: #ff3838; 
+  font-weight: 600;
   text-decoration: none;
-  color: #f72f2f;
-  font-weight: 550;
-  transition: color 0.3s;
 }
 
 a:hover {
-  color: #e84646;
-  
-}
-
-.login-text
-{
-  color: #ffb3b3;
+  color: #ff1f1f; 
 }
