@@ -21,7 +21,7 @@ export default function TeaCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 5000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
