@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import '../assets/css/login.css';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,24 +21,31 @@ const Login = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.get('http://localhost:8080/users');
+     // For demonstration purposes, we'll use a hardcoded username and password
+     const validUsername = 'smoothgulp';
+     const validPassword = 'refreshing123';
+ 
+     if (username === validUsername && password === validPassword) {
+       localStorage.setItem('username', username);
+       localStorage.setItem('password', password);
+       toast.success('🍹 Welcome back! Your refreshing experience awaits!', {
+         position: "top-center",
+         autoClose: 3000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         progress: undefined,
+       });
+       navigate('/');
+     } else {
+       toast.error('🚫 Oops! It seems we couldn\'t quench your thirst. Please try again.', {
+         position: "top-center",
+         autoClose: 3000,
 
-      const foundUser = response.data.find(
-        (userData) => userData.username === user.username && userData.password === user.password
-      );
-
-      if (foundUser) {
-        localStorage.setItem('username', user.username);
-        localStorage.setItem('password', user.password);
-        navigate('/home');
-      } else {
-        alert('Invalid credentials');
-      }
-    } catch (error) {
-      console.error('Error during login:', error);
-    }
-  };
+       });
+     }
+   };
 
   return (
     <>

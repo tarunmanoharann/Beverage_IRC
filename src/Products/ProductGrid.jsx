@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/css/productGrid.css';
 
-const ProductGrid = ({ items }) => {
+const ProductGrid = ({ items, addToCart, addToFavorites }) => {
   return (
     <div className="product-grid">
       {items.map((item) => (
@@ -13,8 +13,8 @@ const ProductGrid = ({ items }) => {
             <h3>{item.title}</h3>
             <p>{item.price}</p>
             <div className="button-group">
-              <button className="add-to-cart">Add to Cart</button>
-              <button className="favorite">❤</button>
+              <button className="add-to-cart" onClick={() => addToCart(item)}>Add to Cart</button>
+              <button className="favorite" onClick={() => addToFavorites(item)}>❤</button>
             </div>
           </div>
         </div>

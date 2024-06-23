@@ -19,6 +19,7 @@
   border-bottom-right-radius: 12px;
   border-bottom: 2px solid rgba(255, 107, 107, 0.5);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  gap: 5px; /*adding gap between the icons*/
 }
 
 .nav-links .center {
@@ -52,14 +53,56 @@
   }
 }
 
-.logo-placeholder {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  background-color: #ff6b6b;
-  border-radius: 50%;
+.logo {
+  position: relative;
 }
 
-li.logo {
-  padding: 10px 5px;
+.profile-container {
+  cursor: pointer;
+}
+
+.profile-icon {
+  color: #888;
+  font-size: 24px;
+}
+
+.profile-icon.logged-in {
+  color: #4CAF50;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.profile-container:hover .profile-dropdown {
+  display: block;
+}
+
+.profile-dropdown span {
+  display: block;
+  padding: 4px 0;
+  color: #333;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.profile-dropdown button:hover {
+  background-color: #45a049;
 }

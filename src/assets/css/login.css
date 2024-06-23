@@ -1,6 +1,10 @@
-@import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
 
 .logincontainer {
   display: flex;
@@ -8,6 +12,28 @@
   align-items: center;
   justify-content: center;
   height: 92vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.logincontainer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,107,107,0.2) 0%, rgba(255,228,196,0.1) 50%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .logo {
@@ -29,12 +55,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: rgba(255, 228, 196, 0.9); 
+  background: rgba(255, 228, 196, 0.9);
   backdrop-filter: blur(10px);
   box-sizing: border-box;
   border-radius: 10px;
-  border: 2.5px solid rgba(255, 107, 107, 0.5); 
+  border: 2.5px solid rgba(255, 107, 107, 0.5);
   padding: 30px;
+  position: relative;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 input {
@@ -59,49 +97,43 @@ input {
   color: #ff6b6b;
 }
 
-.form input[type="password"],
-.form input[type="text"],
-.form input[type="submit"] {
+.form input[type="password"], .form input[type="text"], .form input[type="submit"] {
   width: 100%;
 }
 
-.form-login label,
-.form-login input[type="text"],
-.form-login input[type="password"],
-.form-login input[type="submit"] {
+.form-login label, .form-login input[type="text"], .form-login input[type="password"], .form-login input[type="submit"] {
   border-radius: 5px;
   padding: 1rem;
   color: #4a4a4a;
 }
 
-
 .form-login label {
-  background-color: rgba(255, 107, 107, 0.2); 
+  background-color: rgba(255, 107, 107, 0.2);
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-.form-login input[type="text"],
-.form-login input[type="password"] {
-  background-color: #fff6e6; 
+.form-login input[type="text"], .form-login input[type="password"] {
+  background-color: #fff6e6;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border: 1px solid #ff6b6b;
 }
 
 .form-login input[type="submit"] {
-  background-color: #ff5252; 
+  background-color: #ff5252;
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
 }
 
 .form-login input[type="submit"]:hover {
-  background-color: #ff3838; 
+  background-color: #ff3838;
+  transform: scale(1.05);
 }
 
 .form-field {
@@ -120,17 +152,40 @@ input {
   width: 1px;
 }
 
-.text--center,
-.login-text {
+.text--center, .login-text {
   color: #3a3a3a;
 }
 
 a {
-  color: #ff3838; 
+  color: #ff3838;
   font-weight: 600;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #ff1f1f; 
+  color: #ff1f1f;
+}
+
+/* Beverage-themed effects */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: rise 10s infinite ease-in;
+  z-index: 0;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
 }
