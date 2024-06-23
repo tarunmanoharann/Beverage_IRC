@@ -1,8 +1,8 @@
-
-
-
 import React, { useState, useEffect } from 'react';
 import '../assets/css/carousel.css';
+import '../assets/css/page.css';
+import FilterOptions from '../Components/FilterOptions';
+import ProductGrid from '../Products/ProductGrid';
 
 
 import wine01 from '../assets/images/wine/wine1.jpg'
@@ -39,6 +39,7 @@ export default function Whisky() {
   };
 
   return (
+    <div className="page-container">
     <div className="carousel-container">
       <div className="carousel">
         {items.map((item, index) => (
@@ -63,6 +64,15 @@ export default function Whisky() {
       </div>
       <button className="carousel-control prev" onClick={prevSlide}>&lt;</button>
       <button className="carousel-control next" onClick={nextSlide}>&gt;</button>
+    </div>
+    <div className="content-section">
+        <aside className="filter-sidebar">
+          <FilterOptions />
+        </aside>
+        <main className="product-main">
+          <ProductGrid items={items} />
+        </main>
+     </div>
     </div>
   );
 }

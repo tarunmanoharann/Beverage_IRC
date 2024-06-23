@@ -1,0 +1,31 @@
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .content-section {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+  }
+  
+  .filter-sidebar {
+    flex: 0 0 250px;
+  }
+  
+  .product-main {
+    flex: 1; 
+  }
+  
+  @media (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+    }
+  
+    .filter-sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }

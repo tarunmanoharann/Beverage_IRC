@@ -1,5 +1,6 @@
 import Home from "./Components/Home";
 import Nav from "./Components/Nav";
+import footer from "./Components/footer";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import Dashboard from "./Pages/Dashboard";
@@ -9,6 +10,7 @@ import Softdrinks  from "./Pages/Softdrinks";
 import Wine  from "./Pages/Wine";
 import Whisky  from "./Pages/Whisky";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./Components/footer";
 
 
 
@@ -20,7 +22,6 @@ function App() {
         
         <Nav />
         <Routes>
-          
           <Route path="/" element={<Home/>}></Route>
           <Route path="/login" element={<Login />} />
           <Route path="/Sign_up" element={<SignUp />} />
@@ -31,6 +32,7 @@ function App() {
           <Route path="/wine" element={<Wine/>}/>
           <Route path="/whisky" element={<Whisky/>}/>
         </Routes>
+        {/* <Footer /> */}
 
       </Router>
     </>
