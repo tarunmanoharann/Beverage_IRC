@@ -13,6 +13,7 @@ const CartPage = () => {
     const updatedCart = cartItems.filter(item => item.id !== id);
     setCartItems(updatedCart);
     localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    window.dispatchEvent(new Event('storage')); // Add this line
   };
 
   const totalPrice = cartItems.reduce((total, item) => total + parseFloat(item.price.slice(1)), 0);

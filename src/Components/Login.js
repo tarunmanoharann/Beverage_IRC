@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     
     const validUsername = 'smoothgulp';
-    const validPassword = 'refreshing123';
+    const validPassword = 'smoothgulp';
       
     if (username === validUsername && password === validPassword) {
       localStorage.setItem('username', username);

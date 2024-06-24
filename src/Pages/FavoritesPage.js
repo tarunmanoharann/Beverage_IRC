@@ -13,8 +13,8 @@ const FavoritesPage = () => {
     const updatedFavorites = favoriteItems.filter(item => item.id !== id);
     setFavoriteItems(updatedFavorites);
     localStorage.setItem('favoriteItems', JSON.stringify(updatedFavorites));
+    window.dispatchEvent(new Event('storage')); // Add this line
   };
-
   return (
     <div className="favorites-page">
       <h2>Your Favorites</h2>

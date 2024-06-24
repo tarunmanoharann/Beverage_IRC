@@ -19,7 +19,7 @@
   border-bottom-right-radius: 12px;
   border-bottom: 2px solid rgba(255, 107, 107, 0.5);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  gap: 5px; /*adding gap between the icons*/
+  gap:7px; /*adding gap between the icons*/
 }
 
 .nav-links .center {
@@ -30,11 +30,113 @@
   flex: 1;
 }
 
+.smoothgulp-title {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffecd2;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.gulp {
+  position: relative;
+  display: inline-block;
+}
+
+.drop {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #ffecd2;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.smoothgulp-title:hover .drop {
+  transform: translateX(-50%) translateY(5px);
+  border-bottom: 10px solid #ff6b6b;
+}
+
+.bubble {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.bubble:nth-child(1) {
+  width: 8px;
+  height: 8px;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 6px;
+  height: 6px;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 7px;
+  height: 7px;
+  left: 70%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.smoothgulp-title:hover {
+  color: #ff6b6b;
+}
+
+.smoothgulp-title:hover .bubble {
+  background-color: rgba(255, 107, 107, 0.7);
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+.smoothgulp-title:hover .gulp {
+  animation: shake 0.5s ease-in-out;
+}
+
 .nav-links li {
   list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .nav-links li a {
+  display: flex; 
+  align-items: center;
+  height: 100%;
   position: relative;
   color: #ffecd2;
   font-size: 25px;
@@ -55,15 +157,23 @@
 
 .logo {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%; 
 }
 
 .profile-container {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%; 
 }
 
 .profile-icon {
   color: #888;
   font-size: 24px;
+  display: flex; 
+  align-items: center; 
 }
 
 .profile-icon.logged-in {
@@ -105,4 +215,19 @@
 
 .profile-dropdown button:hover {
   background-color: #45a049;
+}
+
+.MuiBadge-root {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.MuiBadge-badge {
+  background-color: #ff6b6b !important;
+  color: white !important;
+}
+
+
+.nav-links li svg {
+  font-size: 24px; 
 }

@@ -52,11 +52,12 @@ export default function Tea() {
       setCartItems(updatedCart);
       localStorage.setItem('cartItems', JSON.stringify(updatedCart));
       toast.success('Item added to cart!');
+      window.dispatchEvent(new Event('storage')); // Trigger storage event
     } else {
       toast.warning('Please log in to add items to cart');
     }
   };
-
+  
   const addToFavorites = (item) => {
     const username = localStorage.getItem('username');
     if (username) {
@@ -64,10 +65,12 @@ export default function Tea() {
       setFavoriteItems(updatedFavorites);
       localStorage.setItem('favoriteItems', JSON.stringify(updatedFavorites));
       toast.success('Item added to favorites!');
+      window.dispatchEvent(new Event('storage')); // Trigger storage event
     } else {
       toast.warning('Please log in to add items to favorites');
     }
   };
+ 
 
   return (
     <div className="page-container">
