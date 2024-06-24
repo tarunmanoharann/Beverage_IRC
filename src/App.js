@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,10 +13,21 @@ import Wine from "./Pages/Wine";
 import Whisky from "./Pages/Whisky";
 import CartPage from "./Pages/CartPage";
 import FavoritesPage from "./Pages/FavoritesPage";
+import Pre from "./Components/Pre";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [favoriteItems, setFavoriteItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
+
+  if (loading) {
+    return <Pre setLoading={setLoading} />;
+  }
 
   return (
     <>
