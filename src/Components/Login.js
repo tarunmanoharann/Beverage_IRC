@@ -61,7 +61,7 @@ const Login = () => {
                 id="login-username"
                 type="text"
                 className="form-input"
-                placeholder="Username"
+                placeholder="Username : smoothgulp"
                 name="username"
                 value={username}
                 onChange={onInputChange}
@@ -74,7 +74,7 @@ const Login = () => {
                 <span className="hidden">Password</span>
               </label>
               <input id="login-password" type="password"  className="form-input"
-                placeholder="Password"
+                placeholder="Password : smoothgulp"
                 name="password"
                 value={password} 
                 onChange={onInputChange}
