@@ -25,7 +25,14 @@ const Pre = ({ setLoading }) => {
 
   return (
     <div className="preloader">
-      <div className="pre-logo">Smooth Gulp</div>
+      <div className="pre-logo">
+      <span className="smoothgulp-title">
+           Smooth<span className="gulp">G<span className="drop"></span>ulp</span>
+          <span className="bubble"></span>
+        
+          
+          </span> 
+    </div>
       <div className="liquid-container">
         <div className="liquid" style={{ height: `${progress}%` }}></div>
       </div>
@@ -35,3 +42,4 @@ const Pre = ({ setLoading }) => {
 };
 
 export default Pre;
+
