@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import '../assets/css/carousel.css';
 import '../assets/css/page.css';
 import FilterOptions from '../Components/FilterOptions';
@@ -21,8 +22,15 @@ const items = [
 
 export default function Whisky() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  const [favoriteItems, setFavoriteItems] = useState([]);
 
   useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const savedFavorites = JSON.parse(localStorage.getItem('favoriteItems')) || [];
+    setCartItems(savedCart);
+    setFavoriteItems(savedFavorites);
+
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, 5000);
@@ -36,6 +44,31 @@ export default function Whisky() {
 
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+  };
+
+  
+  const addToCart = (item) => {
+    const username = localStorage.getItem('username');
+    if (username) {
+      const updatedCart = [...cartItems, item];
+      setCartItems(updatedCart);
+      localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+      toast.success('Item added to cart!');
+    } else {
+      toast.warning('Please log in to add items to cart');
+    }
+  };
+
+  const addToFavorites = (item) => {
+    const username = localStorage.getItem('username');
+    if (username) {
+      const updatedFavorites = [...favoriteItems, item];
+      setFavoriteItems(updatedFavorites);
+      localStorage.setItem('favoriteItems', JSON.stringify(updatedFavorites));
+      toast.success('Item added to favorites!');
+    } else {
+      toast.warning('Please log in to add items to favorites');
+    }
   };
 
   return (
@@ -55,8 +88,8 @@ export default function Whisky() {
               <h3>{item.title}</h3>
               <p>{item.price}</p>
               <div className="button-group">
-                <button className="add-to-cart">Add to Cart</button>
-                <button className="favorite">❤</button>
+              <button className="add-to-cart" onClick={() => addToCart(item)}>Add to Cart</button>
+              <button className="favorite" onClick={() => addToFavorites(item)}>❤</button>
               </div>
             </div>
           </div>
@@ -70,7 +103,7 @@ export default function Whisky() {
           <FilterOptions />
         </aside>
         <main className="product-main">
-          <ProductGrid items={items} />
+        <ProductGrid items={items} addToCart={addToCart} addToFavorites={addToFavorites} />
         </main>
      </div>
     </div>

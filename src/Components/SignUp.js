@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   return (
-    <div id="app">
-      <div className="form-wrapper">
-        <section className="container">
+    
+      <div className="signup-container">
+        <section className="signup-item">
           <form action="#" className="form">
             <label><center><h2 className='register'>Registration Form</h2></center></label>
             <div className="input-box">
@@ -54,7 +54,7 @@ const SignUp = () => {
           </div>
         </section>
       </div>
-    </div>
+    
   );
 };
 

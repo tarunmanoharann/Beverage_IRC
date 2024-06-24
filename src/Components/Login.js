@@ -20,36 +20,35 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
-     // For demonstration purposes, we'll use a hardcoded username and password
-     const validUsername = 'smoothgulp';
-     const validPassword = 'refreshing123';
- 
-     if (username === validUsername && password === validPassword) {
-       localStorage.setItem('username', username);
-       localStorage.setItem('password', password);
-       toast.success('🍹 Welcome back! Your refreshing experience awaits!', {
-         position: "top-center",
-         autoClose: 3000,
-         hideProgressBar: false,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         progress: undefined,
-       });
-       navigate('/');
-     } else {
-       toast.error('🚫 Oops! It seems we couldn\'t quench your thirst. Please try again.', {
-         position: "top-center",
-         autoClose: 3000,
-
-       });
-     }
-   };
+    
+    const validUsername = 'smoothgulp';
+    const validPassword = 'refreshing123';
+      
+    if (username === validUsername && password === validPassword) {
+      localStorage.setItem('username', username);
+      // Don't store the password in localStorage for security reasons
+      toast.success('🍹 Welcome back! Your refreshing experience awaits!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      navigate('/');
+      window.dispatchEvent(new Event('storage')); // Trigger storage event
+    } else {
+      toast.error('🚫 Oops! It seems we couldn\'t quench your thirst. Please try again.', {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    }
+  };
 
   return (
     <>
-      <div className="logincontainer">
+      <div className="login-container">
         <div className="login-item">
           <div className="logo">Sign in</div>
 

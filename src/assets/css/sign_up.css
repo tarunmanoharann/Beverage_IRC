@@ -1,17 +1,34 @@
-#app {
+.signup-container {
   display: flex;
-  flex-direction: column;
-  min-height:92vh;
-}
-
-.form-wrapper {
-  flex: 1;
-  display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
+  min-height: 92vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,107,107,0.2) 0%, rgba(255,228,196,0.1) 50%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.signup-item {
   position: relative;
   max-width: 700px;
   margin: 0 auto;
@@ -26,7 +43,7 @@
   border: 2.5px solid rgba(255, 107, 107, 0.5);
 }
 
-.container header {
+.signup-item header {
   font-size: 1.5rem;
   color: #3a3a3a;
   font-weight: 500;
@@ -34,7 +51,7 @@
   margin-bottom: 20px;
 }
 
-.container .form {
+.signup-item .form {
   margin-top: 10px;
 }
 
@@ -147,3 +164,28 @@ h2.register {
 .login-link a:hover {
   color: #ff1f1f;
 }
+
+
+
+/* Beverage-themed effects */
+/* .bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: rise 10s infinite ease-in;
+  z-index: 0;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
+} */

@@ -6,17 +6,17 @@ body {
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
 }
 
-.logincontainer {
+.login-container {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 92vh;
+  min-height: 92vh;
   position: relative;
   overflow: hidden;
 }
 
-.logincontainer::before {
+.login-container::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -168,7 +168,7 @@ a:hover {
 }
 
 /* Beverage-themed effects */
-.bubble {
+/* .bubble {
   position: absolute;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
@@ -188,4 +188,4 @@ a:hover {
     bottom: 1080px;
     transform: translateX(-200px);
   }
-}
+} */
