@@ -184,7 +184,7 @@
   display: none;
   position: absolute;
   right: 0;
-  background-color: #f9f9f9;
+  background-color: rgba(51, 25, 25, 0.95);
   min-width: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -198,8 +198,8 @@
 
 .profile-dropdown span {
   display: block;
-  padding: 4px 0;
-  color: #333;
+  padding: 4px 0px;
+  color: #f2f2f2;
 }
 
 .profile-dropdown button {
