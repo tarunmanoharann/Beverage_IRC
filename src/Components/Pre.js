@@ -29,8 +29,6 @@ const Pre = ({ setLoading }) => {
       <span className="smoothgulp-title">
            Smooth<span className="gulp">G<span className="drop"></span>ulp</span>
           <span className="bubble"></span>
-        
-          
           </span> 
     </div>
       <div className="liquid-container">
